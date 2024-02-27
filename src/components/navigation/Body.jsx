@@ -5,18 +5,15 @@ import { css, jsx } from "@emotion/react";
 import { Sidebar, Segment, Menu } from "semantic-ui-react";
 
 const Body = ({ children, showMenu, toggleMenu }) => {
-  console.log("BF", showMenu);
-
   return (
     <Sidebar.Pushable as={Segment} style={{ overflow: "hidden" }}>
       <Sidebar
         as={Menu}
-        animation='overlay'
+        animation='push'
         visible={showMenu}
         vertical
         inverted
         direction='right'
-        // onHide={toggleMenu}
         css={styles.sidebar}
       >
         {menuConfig.map(
@@ -73,6 +70,8 @@ const styles = {
 
 const menuConfig = [
   { name: "home", label: "Home.", path: "/", isDisabled: false },
-  { name: "about", label: "About B.", path: "/about", isDisabled: false },
-  { name: "blog", label: "Blog.", path: "/blog", isDisabled: false },
+  { name: "youtube", label: "YouTube.", path: "/youtube", isDisabled: false },
+  { name: "freelance", label: "Freelance.", path: "/", isDisabled: false },
+  { name: "projects", label: "Projects.", path: "/", isDisabled: false },
+  { name: "resume", label: "Resume.", path: "/", isDisabled: false },
 ];
