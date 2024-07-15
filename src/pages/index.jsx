@@ -23,9 +23,9 @@ const Home = () => {
                 I like to
                 <br />
                 {isMobile ? (
-                  "build"
+                  "build "
                 ) : (
-                  <span className='neon-text-animation'>build</span>
+                  <span className='neon-text-animation'>build </span>
                 )}
                 things 👨🏾‍💻
               </h1>
@@ -98,10 +98,10 @@ const styles = {
     margin: 0;
     border-radius: 0.25rem;
     border: 1.5rem solid white;
-    // box-shadow: 10px 10px 5px #1b1c1c;
-    // @media (max-width: 500px) {
-    //   display: none;
-    // }
+    box-shadow: 10px 10px 5px #1b1c1c;
+    @media (max-width: 500px) {
+      max-width: ;
+    }
   `,
   threeD: css`
     font-family: "Helvetica Neue", sans-serif;
