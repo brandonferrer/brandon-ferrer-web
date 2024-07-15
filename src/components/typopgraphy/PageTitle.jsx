@@ -15,7 +15,7 @@ export default PageTitle;
 const styles = {
   title: css`
     font-size: 3rem !important;
-    font-family: Montserrat !important;
+    font-family: Nunito Sans !important;
     text-align: center;
     -webkit-transform: rotate(-5deg);
     font-weight: 800 !important;

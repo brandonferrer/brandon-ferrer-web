@@ -2,12 +2,12 @@ import * as React from "react";
 import Layout from "../components/Layout";
 import { PageTitle } from "../components/typopgraphy";
 
-const Projects = () => {
+const About = () => {
   return (
     <Layout>
-      <PageTitle title='Projects' />
+      <PageTitle title='About' />
     </Layout>
   );
 };
 
-export default Projects;
+export default About;

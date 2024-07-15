@@ -54,9 +54,9 @@ export default Body;
 const styles = {
   menuItem: css`
     color: white;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
-    font-family: Montserrat;
+    font-family: Nunito Sans;
     letter-spacing: 1px;
     text-transform: uppercase;
   `,
@@ -81,7 +81,7 @@ const styles = {
 
 const menuConfig = [
   { name: "home", label: "Home", path: "/", isDisabled: false },
-  { name: "about", label: "About", path: "/about", isDisabled: true },
+  { name: "about", label: "About", path: "/about", isDisabled: false },
   {
     name: "portfolio",
     label: "Portfolio",
@@ -89,5 +89,5 @@ const menuConfig = [
     isDisabled: true,
   },
   { name: "youtube", label: "YouTube.", path: "/youtube", isDisabled: true },
-  { name: "contact", label: "Contact", path: "/contact", isDisabled: true },
+  { name: "contact", label: "Contact", path: "/contact", isDisabled: false },
 ];

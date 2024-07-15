@@ -653,6 +653,7 @@ pre tt:after {
   font-family: Nunito Sans;
   text-transform: uppercase;
   animation: blink ease-in infinite 3.2s;
+  -webkit-animation: blink ease-in infinite 3.2s;
 }
 
 @keyframes blink {
@@ -685,7 +686,7 @@ pre tt:after {
   }
 
   .neon-text {
-    font-size: 45px;
+    font-size: 32px;
   }
 }
 
