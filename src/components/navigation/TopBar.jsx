@@ -15,7 +15,7 @@ const TopBar = ({ toggleMenu }) => (
             letterSpacing: "1.2px",
           }}
         >
-          BRANDON FERRER
+          BRANDON FERRER.
         </h1>
       </Menu.Item>
       <Menu.Menu position='right'>

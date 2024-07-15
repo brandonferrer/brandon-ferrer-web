@@ -2,14 +2,12 @@ import * as React from "react";
 import Layout from "../components/Layout";
 import { PageTitle } from "../components/typopgraphy";
 
-const Index = () => {
+const Freelance = () => {
   return (
     <Layout>
-      <PageTitle title='Home' />
+      <PageTitle title='Freelance' />
     </Layout>
   );
 };
 
-export default Index;
-
-export const Head = () => <title>BrandonFerrer.com</title>;
+export default Freelance;

@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-/** @jsx jsx */
-import { css, jsx } from "@emotion/react";
+import { css } from "@emotion/react";
 import { Sidebar, Segment, Menu } from "semantic-ui-react";
 
 const Body = ({ children, showMenu, toggleMenu }) => {
@@ -9,7 +8,7 @@ const Body = ({ children, showMenu, toggleMenu }) => {
     <Sidebar.Pushable as={Segment} style={{ overflow: "hidden" }}>
       <Sidebar
         as={Menu}
-        animation='push'
+        animation='overlay'
         visible={showMenu}
         vertical
         inverted
@@ -19,12 +18,8 @@ const Body = ({ children, showMenu, toggleMenu }) => {
         {menuConfig.map(
           (navItem) =>
             !navItem.isDisabled && (
-              <Link to={navItem.path}>
-                <Menu.Item
-                  key={navItem.name}
-                  name={navItem.name}
-                  onClick={toggleMenu}
-                >
+              <Link to={navItem.path} key={navItem.name}>
+                <Menu.Item as='span' name={navItem.name} onClick={toggleMenu}>
                   <span css={styles.menuItem}>{navItem.label}</span>
                 </Menu.Item>
               </Link>
@@ -32,7 +27,15 @@ const Body = ({ children, showMenu, toggleMenu }) => {
         )}
       </Sidebar>
       <Sidebar.Pusher>
-        <Segment basic style={{ height: "98vh", top: "60px" }}>
+        <Segment
+          basic
+          style={{
+            height: "100vh",
+            top: "60px",
+            marginBottom: "60px",
+            overflow: "auto",
+          }}
+        >
           {children}
         </Segment>
       </Sidebar.Pusher>
@@ -49,6 +52,7 @@ const styles = {
     font-weight: 700;
     font-family: Montserrat;
     letter-spacing: 1px;
+    text-transform: uppercase;
   `,
   sidebar: css`
     top: 12rem !important;
@@ -71,7 +75,16 @@ const styles = {
 const menuConfig = [
   { name: "home", label: "Home.", path: "/", isDisabled: false },
   { name: "youtube", label: "YouTube.", path: "/youtube", isDisabled: false },
-  { name: "freelance", label: "Freelance.", path: "/", isDisabled: false },
-  { name: "projects", label: "Projects.", path: "/", isDisabled: false },
-  { name: "resume", label: "Resume.", path: "/", isDisabled: false },
+  {
+    name: "freelance",
+    label: "Freelance.",
+    path: "/freelance",
+    isDisabled: false,
+  },
+  {
+    name: "projects",
+    label: "Projects.",
+    path: "/projects",
+    isDisabled: false,
+  },
 ];
