@@ -1,25 +1,9 @@
-// import * as React from "react";
-// import Layout from "../components/Layout";
-// import { PageTitle } from "../components/typopgraphy";
-
-// const Index = () => {
-//   return (
-//     <Layout>
-//       <PageTitle title='Home' />
-//     </Layout>
-//   );
-// };
-
-// export default Index;
-
-// export const Head = () => <title>BrandonFerrer.com</title>;
-
 import * as React from "react";
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react";
 import { Grid } from "semantic-ui-react";
 import { StaticImage } from "gatsby-plugin-image";
-// import { isMobile } from "react-device-detect";
+import { isMobile } from "react-device-detect";
 import Layout from "../components/Layout";
 import { ContentWrapper } from "../shared/wrappers";
 
@@ -38,7 +22,12 @@ const Home = () => {
               <h1 className='neon-text'>
                 I like to
                 <br />
-                <span className='neon-text-animation'>build</span> things 👨🏾‍💻
+                {isMobile ? (
+                  "build"
+                ) : (
+                  <span className='neon-text-animation'>build</span>
+                )}
+                things 👨🏾‍💻
               </h1>
             </div>
           </Grid.Column>
