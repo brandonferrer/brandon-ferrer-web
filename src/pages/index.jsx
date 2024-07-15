@@ -22,13 +22,12 @@ const Home = () => {
               <h1 className='neon-text'>
                 I like to
                 <br />
-                <span className='neon-text-animation'>build</span> things 👨🏾‍💻
-                {/* {isMobile ? (
+                {isMobile ? (
                   "build "
                 ) : (
                   <span className='neon-text-animation'>build </span>
-                )} 
-                things 👨🏾‍💻*/}
+                )}
+                things 👨🏾‍💻
               </h1>
             </div>
           </Grid.Column>
