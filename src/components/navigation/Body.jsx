@@ -2,13 +2,18 @@ import React from "react";
 import { Link } from "gatsby";
 import { css } from "@emotion/react";
 import { Sidebar, Segment, Menu } from "semantic-ui-react";
+import lofi from "../../images/lofi.jpg";
 
 const Body = ({ children, showMenu, toggleMenu }) => {
   return (
-    <Sidebar.Pushable as={Segment} style={{ overflow: "hidden" }}>
+    <Sidebar.Pushable
+      as={Segment}
+      css={styles.bgLofi}
+      style={{ overflow: "hidden", borderRadius: 0 }}
+    >
       <Sidebar
         as={Menu}
-        animation='overlay'
+        animation='scale down'
         visible={showMenu}
         vertical
         inverted
@@ -26,8 +31,9 @@ const Body = ({ children, showMenu, toggleMenu }) => {
             )
         )}
       </Sidebar>
-      <Sidebar.Pusher>
-        <Segment
+      <Sidebar.Pusher css={styles.bgDark}>
+        {/* <Segment
+          css={styles.bgDark}
           basic
           style={{
             height: "100vh",
@@ -35,9 +41,9 @@ const Body = ({ children, showMenu, toggleMenu }) => {
             marginBottom: "60px",
             overflow: "auto",
           }}
-        >
-          {children}
-        </Segment>
+        > */}
+        {children}
+        {/* </Segment> */}
       </Sidebar.Pusher>
     </Sidebar.Pushable>
   );
@@ -55,36 +61,33 @@ const styles = {
     text-transform: uppercase;
   `,
   sidebar: css`
-    top: 12rem !important;
+    top: 20rem !important;
+    bottom: 0;
     position: fixed;
   `,
   disabled: css`
     color: #666666;
   `,
-  bgYellow: css`
-    background-color: #ffeb3b !important;
+  bgDark: css`
+    background-color: #111 !important;
+    background: none !important;
   `,
-  bgRed: css`
-    background-color: #f44336 !important;
-  `,
-  bgRedGradient: css`
-    background: linear-gradient(120deg, #f44336, #1a1b1d) !important;
+  bgLofi: css`
+    background-image: url(${lofi}) !important;
+    background-size: cover !important;
+    border: 1px solid black !important;
   `,
 };
 
 const menuConfig = [
-  { name: "home", label: "Home.", path: "/", isDisabled: false },
-  { name: "youtube", label: "YouTube.", path: "/youtube", isDisabled: false },
+  { name: "home", label: "Home", path: "/", isDisabled: false },
+  { name: "about", label: "About", path: "/about", isDisabled: true },
   {
-    name: "freelance",
-    label: "Freelance.",
-    path: "/freelance",
-    isDisabled: false,
+    name: "portfolio",
+    label: "Portfolio",
+    path: "/portfolio",
+    isDisabled: true,
   },
-  {
-    name: "projects",
-    label: "Projects.",
-    path: "/projects",
-    isDisabled: false,
-  },
+  { name: "youtube", label: "YouTube.", path: "/youtube", isDisabled: true },
+  { name: "contact", label: "Contact", path: "/contact", isDisabled: true },
 ];

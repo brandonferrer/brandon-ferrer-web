@@ -10,23 +10,26 @@ const TopBar = ({ toggleMenu }) => (
           style={{
             color: "white",
             fontWeight: 800,
-            fontSize: "18px",
+            fontSize: "20px",
             fontFamily: "Nunito Sans",
             letterSpacing: "1.2px",
           }}
         >
-          BRANDON FERRER.
+          BRANDON FERRER
         </h1>
       </Menu.Item>
       <Menu.Menu position='right'>
         <Menu.Item onClick={toggleMenu}>
           <span
             style={{
+              color: "white",
               fontWeight: 800,
-              fontSize: "24px",
+              fontSize: "20px",
+              fontFamily: "Nunito Sans",
+              letterSpacing: "1.2px",
             }}
           >
-            🍔
+            🍔 MENU
           </span>
         </Menu.Item>
       </Menu.Menu>
