@@ -645,6 +645,7 @@ pre tt:after {
   font-family: Nunito Sans;
   text-transform: uppercase;
   animation: blink ease-in infinite 3.2s;
+  -webkit-animation: blink ease-in infinite 3.2s;
 }
 
 @keyframes blink {
