@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import { Menu, Container } from "semantic-ui-react";
+import { isMobile } from "react-device-detect";
 
 const TopBar = ({ toggleMenu }) => (
   <Menu inverted borderless fixed='top' size='huge'>
@@ -15,7 +16,7 @@ const TopBar = ({ toggleMenu }) => (
             letterSpacing: "1.2px",
           }}
         >
-          BRANDON FERRER
+          {isMobile ? "BF" : "BRANDON FERRER"}
         </h1>
       </Menu.Item>
       <Menu.Menu position='right'>
