@@ -4,12 +4,12 @@ import { css, jsx } from "@emotion/react";
 import { Grid } from "semantic-ui-react";
 import { StaticImage } from "gatsby-plugin-image";
 import { isMobile } from "react-device-detect";
-import { RevealContent, Reveal } from "semantic-ui-react";
+// import { RevealContent, Reveal } from "semantic-ui-react";
 import Layout from "../components/Layout";
 import { ContentWrapper } from "../shared/wrappers";
 
 const Home = () => {
-  const imageWidth = 240;
+  const imageWidth = 300;
   return (
     <Layout>
       <ContentWrapper index>
@@ -39,7 +39,7 @@ const Home = () => {
                 src='../images/stroller-min.jpg'
                 css={styles.image}
                 alt='brandon'
-                // width={imageWidth}
+                width={imageWidth}
               />
             </div>
           </Grid.Column>
@@ -113,12 +113,6 @@ const styles = {
     //   display: none;
     // }
   `,
-  fifty: css`
-    min-height: 200px;
-    @media (max-width: 500px) {
-      padding-top: 2rem;
-    }
-  `,
   textWrapper: css`
   width: 100%;
   minHeight: 40px;
@@ -139,23 +133,5 @@ const styles = {
     margin: 0;
     border-radius: 0.25rem;
     border: 1.5rem solid white;
-
-    // @media (min-width: 1200px) {
-    //   top: -7rem;
-    // }
-  `,
-  threeD: css`
-    font-family: "Helvetica Neue", sans-serif;
-    font-size: 4rem;
-    color: #22313f;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    text-shadow: -0.09em 0 0 #f22613, 0.09em 0 0 #00ffff;
-    @media (max-width: 1024px) {
-      font-size: 3rem;
-    }
-    @media (max-width: 500px) {
-      font-size: 2rem;
-    }
   `,
 };
