@@ -44,18 +44,15 @@ const Home = () => {
               <RevealContent hidden>
                 <h1 css={styles.heyFont}>Hey there 👋🏽</h1>
                 <p css={styles.contextFont}>
-                  I'm a freelance web developer providing design/development
-                  services and technology consulting taking small to mid size
-                  businesses to the next level!
+                  I'm a freelance web developer providing development services
+                  and technology consulting taking small to mid size businesses
+                  to the next level!
                   <br />
                   <br />
                   Being a software engineer at a fortune 500 software company,
                   and working at an early stage tech startup, I'll deliver value
                   and guidance beyond just your website, mobile app or online
-                  strategy.
-                  <br />
-                  <br />
-                  Let's chat!
+                  strategy. Let's chat! 😅
                 </p>
               </RevealContent>
             </Reveal>
@@ -86,6 +83,9 @@ const styles = {
     color: white;
     padding: 1rem;
     max-width: 400px;
+    @media (max-width: 375px) {
+      font-size: 14px;
+    }
   `,
   imageWrapper: css`
     width: 100%;
@@ -123,9 +123,9 @@ const styles = {
     margin: 0;
     border-radius: 0.25rem;
     border: 1.5rem solid white;
-    box-shadow: 10px 10px 5px #1b1c1c;
-    @media (max-width: 500px) {
-      max-width: ;
+
+    @media (min-width: 1200px) {
+      top: -7rem;
     }
   `,
   threeD: css`
