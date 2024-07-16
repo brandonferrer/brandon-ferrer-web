@@ -35,25 +35,29 @@ const Home = () => {
           <Grid.Column>
             <Reveal animated='fade'>
               <RevealContent visible>
-                <StaticImage
-                  src='../images/stroller-min.jpg'
-                  css={styles.image}
-                  alt='brandon'
-                />
+                <div css={styles.imageWrapper}>
+                  <StaticImage
+                    src='../images/stroller-min.jpg'
+                    css={styles.image}
+                    alt='brandon'
+                  />
+                </div>
               </RevealContent>
               <RevealContent hidden>
-                <h1 css={styles.heyFont}>Hey there 👋🏽</h1>
-                <p css={styles.contextFont}>
-                  I'm a freelance web developer providing development services
-                  and technology consulting taking small to mid size businesses
-                  to the next level!
-                  <br />
-                  <br />
-                  Being a software engineer at a fortune 500 software company,
-                  and working at an early stage tech startup, I'll deliver value
-                  and guidance beyond just your website, mobile app or online
-                  strategy. Let's chat! 😅
-                </p>
+                <div css={styles.imageWrapper}>
+                  <h1 css={styles.heyFont}>Hey there 👋🏽</h1>
+                  <p css={styles.contextFont}>
+                    I'm a freelance web developer providing development services
+                    and technology consulting taking small to mid size
+                    businesses to the next level!
+                    <br />
+                    <br />
+                    Being a software engineer at a fortune 500 software company,
+                    and working at an early stage tech startup, I'll deliver
+                    value and guidance beyond just your website, mobile app or
+                    online strategy. Let's chat! 😅
+                  </p>
+                </div>
               </RevealContent>
             </Reveal>
           </Grid.Column>
