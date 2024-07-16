@@ -4,6 +4,7 @@ import { css, jsx } from "@emotion/react";
 import { Grid } from "semantic-ui-react";
 import { StaticImage } from "gatsby-plugin-image";
 import { isMobile } from "react-device-detect";
+import { RevealContent, Reveal } from "semantic-ui-react";
 import Layout from "../components/Layout";
 import { ContentWrapper } from "../shared/wrappers";
 
@@ -32,13 +33,35 @@ const Home = () => {
             </div>
           </Grid.Column>
           <Grid.Column>
-            <div css={styles.imageWrapper}>
-              <StaticImage
-                src='../images/stroller-min.jpg'
-                css={styles.image}
-                alt='brandon'
-              />
-            </div>
+            <Reveal animated='move right'>
+              <RevealContent visible>
+                <div css={styles.imageWrapper}>
+                  <StaticImage
+                    src='../images/stroller-min.jpg'
+                    css={styles.image}
+                    alt='brandon'
+                  />
+                </div>
+              </RevealContent>
+              <RevealContent hidden>
+                <div css={styles.imageWrapper}>
+                  <h1 css={styles.heyFont}>Hey there 👋🏽</h1>
+                  <h1 css={styles.contextFont}>
+                    I'm a freelance web developer that works with small
+                    businesses providing website and technology solutions that
+                    take their business to the next level.
+                    <br />
+                    <br />
+                    While being a software engineer at an early stage tech
+                    startup and working at a fortune 500 enterprise software
+                    company, I'll deliver insane value and guidance beyond just
+                    your website or mobile app. <br />
+                    <br />
+                    Let's chat!
+                  </h1>
+                </div>
+              </RevealContent>
+            </Reveal>
           </Grid.Column>
         </Grid>
       </ContentWrapper>
@@ -51,24 +74,29 @@ export default Home;
 export const Head = () => <title>BrandonFerrer.com | Home</title>;
 
 const styles = {
-  typewriterFont: css`
-    font-family: impact !important;
-    font-size: 16px;
+  heyFont: css`
+    font-family: Indie Flower;
+    text-transform: uppercase;
+    font-size: 25px;
     color: white;
-}
-    @media (max-width: 1024px) {
-      font-size: 2.25rem;
-    }
-    @media (max-width: 500px) {
-      display: none;
-    }
+    padding: 1rem;
+    max-width: 400px;
+  `,
+  contextFont: css`
+    font-family: Nunito Sans;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: white;
+    padding: 1rem;
+    max-width: 400px;
   `,
   imageWrapper: css`
     width: 100%;
 
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: center;
+    flex-direction: column;
     // @media (max-width: 500px) {
     //   display: none;
     // }
