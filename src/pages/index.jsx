@@ -33,6 +33,15 @@ const Home = () => {
             </div>
           </Grid.Column>
           <Grid.Column>
+            <div css={styles.imageWrapper}>
+              <StaticImage
+                src='../images/stroller-min.jpg'
+                css={styles.image}
+                alt='brandon'
+              />
+            </div>
+          </Grid.Column>
+          {/* <Grid.Column>
             <Reveal animated='fade'>
               <RevealContent visible>
                 <div css={styles.imageWrapper}>
@@ -60,7 +69,7 @@ const Home = () => {
                 </div>
               </RevealContent>
             </Reveal>
-          </Grid.Column>
+          </Grid.Column> */}
         </Grid>
       </ContentWrapper>
     </Layout>
@@ -123,14 +132,15 @@ const styles = {
   ,
 `,
   image: css`
+    display: inline-block;
     max-width: 400px;
     margin: 0;
     border-radius: 0.25rem;
     border: 1.5rem solid white;
 
-    @media (min-width: 1200px) {
-      top: -7rem;
-    }
+    // @media (min-width: 1200px) {
+    //   top: -7rem;
+    // }
   `,
   threeD: css`
     font-family: "Helvetica Neue", sans-serif;
