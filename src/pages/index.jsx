@@ -9,7 +9,7 @@ import Layout from "../components/Layout";
 import { ContentWrapper } from "../shared/wrappers";
 
 const Home = () => {
-  const imageWidth = isMobile ? 200 : 260;
+  const imageWidth = 240;
   return (
     <Layout>
       <ContentWrapper index>

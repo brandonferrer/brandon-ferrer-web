@@ -60,6 +60,9 @@ const styles = {
     display: flex;
     align-items: center;
     padding: 2rem;
+    @media (max-width: 500px) {
+      padding: 1rem;
+    }
   `,
   contentWrapperBlog: css`
     background-color: #fff !important;
