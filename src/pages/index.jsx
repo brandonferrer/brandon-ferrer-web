@@ -9,6 +9,7 @@ import Layout from "../components/Layout";
 import { ContentWrapper } from "../shared/wrappers";
 
 const Home = () => {
+  const imageWidth = isMobile ? 200 : 260;
   return (
     <Layout>
       <ContentWrapper index>
@@ -38,6 +39,7 @@ const Home = () => {
                 src='../images/stroller-min.jpg'
                 css={styles.image}
                 alt='brandon'
+                width={imageWidth}
               />
             </div>
           </Grid.Column>
