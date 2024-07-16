@@ -39,7 +39,7 @@ const Home = () => {
                 src='../images/stroller-min.jpg'
                 css={styles.image}
                 alt='brandon'
-                width={imageWidth}
+                // width={imageWidth}
               />
             </div>
           </Grid.Column>
