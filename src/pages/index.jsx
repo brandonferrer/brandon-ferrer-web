@@ -33,7 +33,7 @@ const Home = () => {
             </div>
           </Grid.Column>
           <Grid.Column>
-            <Reveal animated='move right'>
+            <Reveal animated='fade'>
               <RevealContent visible>
                 <div css={styles.imageWrapper}>
                   <StaticImage
