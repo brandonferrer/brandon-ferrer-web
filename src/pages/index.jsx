@@ -35,31 +35,28 @@ const Home = () => {
           <Grid.Column>
             <Reveal animated='fade'>
               <RevealContent visible>
-                <div css={styles.imageWrapper}>
-                  <StaticImage
-                    src='../images/stroller-min.jpg'
-                    css={styles.image}
-                    alt='brandon'
-                  />
-                </div>
+                <StaticImage
+                  src='../images/stroller-min.jpg'
+                  css={styles.image}
+                  alt='brandon'
+                />
               </RevealContent>
               <RevealContent hidden>
-                <div css={styles.imageWrapper}>
-                  <h1 css={styles.heyFont}>Hey there 👋🏽</h1>
-                  <h1 css={styles.contextFont}>
-                    I'm a freelance web developer that works with small
-                    businesses providing website and technology solutions that
-                    take their business to the next level.
-                    <br />
-                    <br />
-                    While being a software engineer at an early stage tech
-                    startup and working at a fortune 500 enterprise software
-                    company, I'll deliver insane value and guidance beyond just
-                    your website or mobile app. <br />
-                    <br />
-                    Let's chat!
-                  </h1>
-                </div>
+                <h1 css={styles.heyFont}>Hey there 👋🏽</h1>
+                <p css={styles.contextFont}>
+                  I'm a freelance web developer providing design/development
+                  services and technology consulting taking small to mid size
+                  businesses to the next level!
+                  <br />
+                  <br />
+                  Being a software engineer at a fortune 500 software company,
+                  and working at an early stage tech startup, I'll deliver value
+                  and guidance beyond just your website, mobile app or online
+                  strategy.
+                  <br />
+                  <br />
+                  Let's chat!
+                </p>
               </RevealContent>
             </Reveal>
           </Grid.Column>
@@ -85,7 +82,7 @@ const styles = {
   contextFont: css`
     font-family: Nunito Sans;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 16px;
     color: white;
     padding: 1rem;
     max-width: 400px;
